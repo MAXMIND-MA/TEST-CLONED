@@ -1,3 +1,3 @@
 <?php 
-echo "MAXMIND";
-//phpinfo();
+//echo "MAXMIND";
+phpinfo();
