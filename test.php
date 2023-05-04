@@ -9,7 +9,7 @@ $dbname = "maxmind_remote_db";
 $password = "6ALUIHShCzSx";
 $username = "maxmind_remote_user";
 
-$pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+$pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
 
 $stmt = $pdo->prepare("SELECT * FROM tblusers");
 $stmt->execute();
