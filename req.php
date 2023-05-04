@@ -1,5 +1,7 @@
 <?php
 
+$ext = new ReflectionExtension('mysqli'); 
+
 if (version_compare(PHP_VERSION, '7.4.0') >= 0) {
     $requirement1 = "V." . PHP_VERSION ;
 } else {
@@ -110,6 +112,10 @@ if ($url_f_open != '1'
             <tr>
                 <td>PHP >= 7.4.0</td>
                 <td><?php echo $requirement1; ?></td>
+            </tr>
+            <tr>
+                <td>MYSQLi</td>
+                <td><?php echo $ext->getVersion() ?></td>
             </tr>
             <tr>
                 <td>MySQLi PHP Extension</td>
