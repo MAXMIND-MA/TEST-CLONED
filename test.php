@@ -4,10 +4,10 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-$host = "51.68.174.244";
-$dbname = "maxmind_remote_db";
-$password = "6ALUIHShCzSx";
-$username = "maxmind_remote_user";
+$host = "10.11.227.36";
+$dbname = "maxmind_db";
+$username = "maxmind_user";
+$password = "M@xmind@2023.";
 
 $pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
 
