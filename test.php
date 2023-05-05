@@ -9,7 +9,11 @@ $dbname = "maxmind_db";
 $username = "maxmind_user";
 $password = "M@xmind@2023.";
 
-$pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
+try {
+    $pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 
 $stmt = $pdo->prepare("SELECT * FROM tblusers");
 $stmt->execute();
